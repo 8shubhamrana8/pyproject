@@ -1,0 +1,301 @@
+Date,Amount,Category
+2026-01-01,49.19,Utilities
+2026-01-01,102.57,Utilities
+2026-01-01,10.03,Dining Out
+2026-01-01,19.51,Dining Out
+2026-01-02,84.98,Utilities
+2026-01-02,35.71,Subscriptions
+2026-01-02,42.22,Dining Out
+2026-01-02,68.29,Subscriptions
+2026-01-03,81.59,Dining Out
+2026-01-03,28.61,Utilities
+2026-01-03,13.24,Utilities
+2026-01-03,33.88,Transport
+2026-01-03,71.61,Transport
+2026-01-04,140.71,Transport
+2026-01-04,23.14,Utilities
+2026-01-04,76.21,Groceries
+2026-01-04,73.75,Utilities
+2026-01-04,8.03,Dining Out
+2026-01-04,19.37,Transport
+2026-01-05,8.57,Subscriptions
+2026-01-05,16.55,Utilities
+2026-01-06,88.9,Utilities
+2026-01-06,70.34,Subscriptions
+2026-01-06,65.74,Groceries
+2026-01-06,27.52,Dining Out
+2026-01-07,22.13,Groceries
+2026-01-07,24.21,Transport
+2026-01-07,39.91,Subscriptions
+2026-01-07,67.29,Groceries
+2026-01-09,69.68,Dining Out
+2026-01-09,20.01,Dining Out
+2026-01-09,74.25,Subscriptions
+2026-01-09,12.57,Subscriptions
+2026-01-10,23.37,Dining Out
+2026-01-10,31.97,Utilities
+2026-01-10,67.72,Subscriptions
+2026-01-11,125.22,Utilities
+2026-01-11,15.03,Groceries
+2026-01-11,95.5,Utilities
+2026-01-11,142.73,Dining Out
+2026-01-12,41.08,Subscriptions
+2026-01-12,31.75,Subscriptions
+2026-01-12,131.82,Dining Out
+2026-01-12,61.49,Transport
+2026-01-13,82.25,Transport
+2026-01-13,78.62,Transport
+2026-01-13,127.42,Utilities
+2026-01-13,144.26,Subscriptions
+2026-01-14,67.37,Transport
+2026-01-14,52.08,Transport
+2026-01-14,7.52,Utilities
+2026-01-15,42.32,Groceries
+2026-01-15,90.29,Groceries
+2026-01-15,71.07,Groceries
+2026-01-16,47.84,Transport
+2026-01-16,64.95,Groceries
+2026-01-16,56.15,Dining Out
+2026-01-16,142.37,Dining Out
+2026-01-16,38.57,Subscriptions
+2026-01-16,131.59,Transport
+2026-01-17,130.26,Dining Out
+2026-01-17,36.91,Subscriptions
+2026-01-18,37.26,Dining Out
+2026-01-18,109.7,Subscriptions
+2026-01-18,74.67,Dining Out
+2026-01-19,102.04,Transport
+2026-01-19,142.27,Transport
+2026-01-20,68.57,Dining Out
+2026-01-20,149.11,Transport
+2026-01-20,60.61,Subscriptions
+2026-01-20,132.86,Utilities
+2026-01-20,124.23,Dining Out
+2026-01-21,63.43,Dining Out
+2026-01-21,12.38,Utilities
+2026-01-22,46.15,Utilities
+2026-01-22,59.49,Dining Out
+2026-01-23,117.55,Subscriptions
+2026-01-23,67.12,Groceries
+2026-01-23,89.42,Groceries
+2026-01-23,111.87,Subscriptions
+2026-01-23,123.99,Utilities
+2026-01-24,87.87,Transport
+2026-01-24,5.97,Dining Out
+2026-01-24,52.93,Groceries
+2026-01-24,46.65,Transport
+2026-01-24,75.1,Groceries
+2026-01-25,29.58,Dining Out
+2026-01-25,10.06,Subscriptions
+2026-01-25,35.73,Groceries
+2026-01-27,94.26,Utilities
+2026-01-28,43.59,Subscriptions
+2026-01-28,121.64,Utilities
+2026-01-28,19.33,Dining Out
+2026-01-28,25.21,Subscriptions
+2026-01-28,77.18,Dining Out
+2026-01-29,111.92,Subscriptions
+2026-01-30,82.22,Utilities
+2026-01-30,61.15,Transport
+2026-01-31,71.82,Subscriptions
+2026-01-31,41.62,Transport
+2026-01-31,46.39,Dining Out
+2026-02-01,70.56,Subscriptions
+2026-02-02,68.02,Groceries
+2026-02-02,80.86,Utilities
+2026-02-02,7.24,Subscriptions
+2026-02-02,123.81,Groceries
+2026-02-02,14.05,Utilities
+2026-02-02,26.11,Dining Out
+2026-02-03,97.45,Transport
+2026-02-03,37.94,Groceries
+2026-02-03,58.92,Transport
+2026-02-03,137.36,Transport
+2026-02-04,54.8,Subscriptions
+2026-02-05,68.83,Dining Out
+2026-02-05,115.97,Transport
+2026-02-06,39.62,Transport
+2026-02-06,63.86,Utilities
+2026-02-07,55.03,Transport
+2026-02-07,5.35,Subscriptions
+2026-02-08,80.13,Subscriptions
+2026-02-08,20.89,Utilities
+2026-02-08,41.84,Utilities
+2026-02-08,68.23,Groceries
+2026-02-09,111.79,Groceries
+2026-02-09,16.27,Dining Out
+2026-02-10,107.08,Utilities
+2026-02-10,77.9,Utilities
+2026-02-10,81.73,Transport
+2026-02-10,132.88,Utilities
+2026-02-10,42.19,Groceries
+2026-02-11,144.8,Subscriptions
+2026-02-11,137.06,Dining Out
+2026-02-11,80.03,Dining Out
+2026-02-11,50.76,Utilities
+2026-02-11,57.2,Groceries
+2026-02-11,76.34,Transport
+2026-02-12,75.66,Transport
+2026-02-12,8.26,Groceries
+2026-02-12,61.49,Subscriptions
+2026-02-12,103.01,Utilities
+2026-02-12,137.63,Utilities
+2026-02-12,87.53,Dining Out
+2026-02-13,9.45,Dining Out
+2026-02-13,95.41,Dining Out
+2026-02-13,12.18,Groceries
+2026-02-13,27.94,Subscriptions
+2026-02-14,51.03,Dining Out
+2026-02-14,126.07,Utilities
+2026-02-14,149.16,Utilities
+2026-02-15,124.13,Utilities
+2026-02-17,34.81,Groceries
+2026-02-17,51.74,Groceries
+2026-02-17,42.52,Subscriptions
+2026-02-18,99.98,Utilities
+2026-02-18,128.15,Groceries
+2026-02-19,86.5,Utilities
+2026-02-19,13.73,Transport
+2026-02-20,143.5,Subscriptions
+2026-02-20,135.8,Subscriptions
+2026-02-21,130.52,Transport
+2026-02-21,117.06,Transport
+2026-02-21,143.13,Dining Out
+2026-02-21,90.99,Transport
+2026-02-21,37.69,Utilities
+2026-02-21,136.62,Dining Out
+2026-02-21,111.33,Subscriptions
+2026-02-22,23.56,Transport
+2026-02-22,68.07,Dining Out
+2026-02-23,30.68,Subscriptions
+2026-02-23,31.03,Utilities
+2026-02-23,72.51,Groceries
+2026-02-23,101.58,Dining Out
+2026-02-23,9.88,Subscriptions
+2026-02-24,73.73,Utilities
+2026-02-24,121.96,Transport
+2026-02-24,16.28,Utilities
+2026-02-24,134.66,Utilities
+2026-02-24,130.13,Utilities
+2026-02-24,67.48,Utilities
+2026-02-24,72.26,Groceries
+2026-02-25,7.13,Subscriptions
+2026-02-25,44.8,Utilities
+2026-02-25,88.71,Utilities
+2026-02-25,132.16,Groceries
+2026-02-26,84.09,Utilities
+2026-02-26,81.34,Transport
+2026-02-26,73.22,Subscriptions
+2026-02-26,16.74,Groceries
+2026-02-27,15.62,Utilities
+2026-02-27,22.04,Dining Out
+2026-02-28,36.55,Transport
+2026-02-28,86.1,Dining Out
+2026-02-28,55.63,Transport
+2026-02-28,54.12,Groceries
+2026-03-01,48.13,Transport
+2026-03-01,79.34,Transport
+2026-03-01,131.22,Groceries
+2026-03-02,50.47,Utilities
+2026-03-02,8.09,Groceries
+2026-03-03,148.49,Groceries
+2026-03-04,140.65,Subscriptions
+2026-03-04,70.74,Groceries
+2026-03-04,75.65,Subscriptions
+2026-03-04,129.4,Utilities
+2026-03-05,11.15,Utilities
+2026-03-05,28.54,Transport
+2026-03-05,132.1,Dining Out
+2026-03-05,65.68,Dining Out
+2026-03-06,107.46,Subscriptions
+2026-03-07,13.43,Groceries
+2026-03-08,78.06,Transport
+2026-03-09,71.72,Transport
+2026-03-09,42.1,Groceries
+2026-03-09,96.4,Transport
+2026-03-09,53.07,Dining Out
+2026-03-09,36.72,Groceries
+2026-03-09,37.66,Subscriptions
+2026-03-10,146.76,Subscriptions
+2026-03-10,89.67,Utilities
+2026-03-11,129.27,Dining Out
+2026-03-11,110.38,Transport
+2026-03-11,129.98,Transport
+2026-03-11,38.75,Utilities
+2026-03-12,87.62,Dining Out
+2026-03-12,149.33,Utilities
+2026-03-12,78.72,Groceries
+2026-03-12,78.48,Subscriptions
+2026-03-12,46.5,Dining Out
+2026-03-12,119.66,Dining Out
+2026-03-13,97.32,Utilities
+2026-03-13,66.62,Transport
+2026-03-13,132.97,Utilities
+2026-03-13,103.43,Transport
+2026-03-13,107.79,Subscriptions
+2026-03-14,18.01,Transport
+2026-03-14,36.58,Transport
+2026-03-14,105.69,Dining Out
+2026-03-14,104.67,Subscriptions
+2026-03-14,143.44,Utilities
+2026-03-15,49.07,Utilities
+2026-03-16,133.86,Dining Out
+2026-03-16,14.65,Subscriptions
+2026-03-17,116.78,Transport
+2026-03-17,62.83,Transport
+2026-03-17,37.08,Groceries
+2026-03-18,98.8,Transport
+2026-03-18,66.23,Subscriptions
+2026-03-18,80.58,Utilities
+2026-03-18,66.7,Dining Out
+2026-03-19,30.69,Dining Out
+2026-03-19,17.71,Groceries
+2026-03-19,33.75,Groceries
+2026-03-19,123.86,Transport
+2026-03-19,107.15,Dining Out
+2026-03-20,59.06,Dining Out
+2026-03-20,74.5,Dining Out
+2026-03-20,113.48,Subscriptions
+2026-03-20,104.85,Dining Out
+2026-03-20,82.38,Transport
+2026-03-20,98.13,Utilities
+2026-03-20,144.84,Transport
+2026-03-20,36.86,Subscriptions
+2026-03-21,70.92,Subscriptions
+2026-03-21,9.81,Dining Out
+2026-03-21,96.47,Transport
+2026-03-23,131.45,Dining Out
+2026-03-23,43.28,Transport
+2026-03-23,29.02,Transport
+2026-03-23,140.86,Utilities
+2026-03-23,129.03,Utilities
+2026-03-23,146.45,Dining Out
+2026-03-23,68.16,Subscriptions
+2026-03-23,136.35,Transport
+2026-03-23,51.62,Transport
+2026-03-24,15.68,Subscriptions
+2026-03-24,23.51,Groceries
+2026-03-25,104.41,Utilities
+2026-03-26,77.11,Groceries
+2026-03-26,65.23,Utilities
+2026-03-26,39.26,Utilities
+2026-03-26,108.8,Groceries
+2026-03-27,105.67,Groceries
+2026-03-27,40.49,Subscriptions
+2026-03-28,15.16,Dining Out
+2026-03-28,146.78,Groceries
+2026-03-29,53.13,Utilities
+2026-03-29,125.02,Utilities
+2026-03-29,46.49,Utilities
+2026-03-29,101.61,Subscriptions
+2026-03-29,65.7,Groceries
+2026-03-30,124.33,Transport
+2026-03-30,18.28,Transport
+2026-03-30,87.14,Dining Out
+2026-03-30,133.5,Dining Out
+2026-03-30,131.62,Utilities
+2026-03-30,12.72,Subscriptions
+2026-03-31,63.64,Subscriptions
+2026-03-31,34.01,Subscriptions
+2026-04-01,62.3,Utilities
+2026-04-01,83.42,Dining Out

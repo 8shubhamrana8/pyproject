@@ -1,0 +1,50 @@
+import csv
+import pandas as pd
+import os
+import sys
+
+# def catspending(filename):
+#     df = pd.read_csv(filename)
+#     total = df['Amount'].sum()
+#     categoryspending = df.groupby('Category').sum()
+#     categoryspending.drop(columns=['Date'], inplace=True)
+#     categoryspending = categoryspending.sort_values(by='Amount', ascending=False)
+#     categoryspending['Percentage'] = (categoryspending['Amount']/total)*100
+#     return categoryspending.to_markdown()
+    
+
+# def hist(filename):
+month_map = {
+    'January': '01',
+    'February': '02',
+    'March': '03',
+    'April': '04',
+    'May': '05',
+    'June': '06',
+    'July': '07',
+    'August': '08',
+    'September': '09',
+    'October': '10',
+    'November': '11',
+    'December': '12'
+}
+df =  pd.read_csv('one_year_data.csv')
+df[['Year', 'Month', 'Day']] = df['Date'].str.split(('-'), expand=True)
+month = input('Enter the month you want to see history of :').strip().title()
+print(month_map[month])
+
+df.drop(columns='Date', inplace=True)
+filtered_df = df[ (df['Month'] == month_map[month])]
+filtered_df = filtered_df[['Day','Category','Amount']]
+filtered_df.reset_index(drop=True, inplace=True)
+print(filtered_df.to_string(),'\n'*3)
+
+
+
+
+
+# D:\SHUBHAM\python\projct\300.csv
+
+
+
+            
