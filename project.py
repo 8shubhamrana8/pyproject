@@ -2,26 +2,22 @@ import sys
 import os
 from pyfiglet import Figlet
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 def pathcheck():
-    askagain = True
-    while askagain:
-        try:    
-            filepath = input('Enter the csv file path: ')
-            if os.path.isfile(filepath):
-                print(2*'\n','File Loaded')
-                return filepath
-            else:
-                print('No such file at diectory')
-                askagain = True
-        except ValueError:
-            print("Invalid Value")
-            askagain = False
-def menu():
-    askagain = True
+    while True:
+        
+        filepath = input('Enter the csv file path: ')
+        if os.path.isfile(filepath):
+            print(2*'\n','File Loaded')
+            return filepath
+        else:
+            print('No such file at diectory')
 
-    while askagain:    
+def menu(filename):
+
+    while True:    
         option = input('''
                 <<<<<<  MENU  >>>>>>
                 (1) Add Expense
@@ -33,19 +29,20 @@ def menu():
         print(f'Option {option} choosen')
         if option == '1':
             print('Add expense','\n')
-            askagain = False
+            
         elif option == '2':
             print('summary')
-            askagain = False
+            catspending(filename)
+            
         elif option == '3':
             print('history')
-            askagain = False
+            
         elif option == '4':
             print('Exiting')
             sys.exit()
         else:
             print("Enter Valid input in digits. Thank You!", end='\n')
-            askagain = True
+            
 
 def budgetoverrun():
     '''set parameters given by user plus have ome default parameters 
@@ -73,14 +70,25 @@ def summary(filename):
     
     ...
 def catspending(filename):
+    
     df = pd.read_csv(filename)
     total = df['Amount'].sum()
-    categoryspending = df.groupby('Category').sum()
-    categoryspending.drop(columns=['Date'], inplace=True)
+    categoryspending = df.groupby('Category', as_index=False)['Amount'].sum()
     categoryspending = categoryspending.sort_values(by='Amount', ascending=False)
     categoryspending['Percentage'] = (categoryspending['Amount']/total)*100
-    return categoryspending.to_markdown()
+    print(categoryspending.to_markdown())
+    labels = categoryspending.index
 
+    # Pie chart sizes (percentages)
+    sizes = categoryspending['Percentage']
+
+    # Plotting the pie chart
+    plt.figure(figsize=(7, 7))
+    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, colors=plt.cm.Paired.colors)
+    plt.title('Category Distribution')
+    plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    plt.show()
+        
 
 def history():
     month_map = {
@@ -114,8 +122,8 @@ def main():
 
     f = Figlet(font = 'rounded')
     print(f.renderText('BUDGET TRACKER'))
-    pathcheck()
-    menu()
+    file = pathcheck()
+    menu(file)
 
     
 
