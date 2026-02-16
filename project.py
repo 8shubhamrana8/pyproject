@@ -1,4 +1,3 @@
-import csv
 import sys
 import os
 from pyfiglet import Figlet
@@ -17,6 +16,7 @@ def pathcheck():
                 print('No such file at diectory')
                 askagain = True
         except ValueError:
+            print("Invalid Value")
             askagain = False
 def menu():
     askagain = True
@@ -67,6 +67,10 @@ def addexpense(filename, expense):
     ...
 
 def summary(filename):
+    
+    
+    
+    
     ...
 def catspending(filename):
     df = pd.read_csv(filename)
@@ -76,8 +80,9 @@ def catspending(filename):
     categoryspending = categoryspending.sort_values(by='Amount', ascending=False)
     categoryspending['Percentage'] = (categoryspending['Amount']/total)*100
     return categoryspending.to_markdown()
+
+
 def history():
-    # split date to months and year and then show user enterd month or year
     month_map = {
     'January': '01',
     'February': '02',
@@ -91,7 +96,7 @@ def history():
     'October': '10',
     'November': '11',
     'December': '12'
-}
+    }
     df =  pd.read_csv('one_year_data.csv')
     df[['Year', 'Month', 'Day']] = df['Date'].str.split(('-'), expand=True)
     month = input('Enter the month you want to see history of :').strip().title()
