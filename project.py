@@ -64,33 +64,6 @@ def addexpense(filename, expense):
     ...
 
 def summary(filename):
-    
-    
-    
-    
-    ...
-def catspending(filename):
-    
-    df = pd.read_csv(filename)
-    total = df['Amount'].sum()
-    categoryspending = df.groupby('Category', as_index=False)['Amount'].sum()
-    categoryspending = categoryspending.sort_values(by='Amount', ascending=False)
-    categoryspending['Percentage'] = (categoryspending['Amount']/total)*100
-    print(categoryspending.to_markdown())
-    labels = categoryspending.index
-
-    # Pie chart sizes (percentages)
-    sizes = categoryspending['Percentage']
-
-    # Plotting the pie chart
-    plt.figure(figsize=(7, 7))
-    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, colors=plt.cm.Paired.colors)
-    plt.title('Category Distribution')
-    plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-    plt.show()
-        
-
-def history():
     month_map = {
     'January': '01',
     'February': '02',
@@ -115,6 +88,74 @@ def history():
     filtered_df = filtered_df[['Day','Category','Amount']]
     filtered_df.reset_index(drop=True, inplace=True)
     print(filtered_df.to_string(),'\n'*3)
+
+
+
+
+
+
+def catspending(filename):
+    
+    df = pd.read_csv(filename)
+    total = df['Amount'].sum()
+    categoryspending = df.groupby('Category', as_index=False)['Amount'].sum()
+    categoryspending = categoryspending.sort_values(by='Amount', ascending=False)
+    categoryspending['Percentage'] = (categoryspending['Amount']/total)*100
+    print(categoryspending.to_markdown())
+    labels = categoryspending.index
+
+    # Pie chart sizes (percentages)
+    sizes = categoryspending['Percentage']
+
+    # Plotting the pie chart
+    plt.figure(figsize=(7, 7))
+    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, colors=plt.cm.Paired.colors)
+    plt.title('Category Distribution')
+    plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    plt.show()
+        
+
+def history(filename):
+    df = pd.read_csv(filename)
+        
+    while True:    
+        choice =  input('''Choose option
+                        
+                        (A) Monthly Spending History of Selected Year
+                        
+                        (B) Yearly Spending history
+
+                        (C) Exit History
+                        
+                        Enter Choice ----> ''').strip().lower()
+        if choice == 'a':
+            yr = int(input('Enter Year : '))
+            print('\n'*2)
+            print(f'Filtering Year {yr}','\n'*3)
+            try:    
+                df['Date'] = pd.to_datetime(df['Date'])
+                filterdf = df[(df['Date'].dt.year == yr)]
+                filterdf['Month'] = filterdf['Date'].dt.to_period('M').dt.month
+                monthly_expense = filterdf.groupby('Month')['Amount'].sum().reset_index()
+                me = monthly_expense.plot.bar(x = 'Month', y = 'Amount', rot = 0)
+                plt.show()
+            except ValueError, IndexError:
+                print(f'{yr} Year not found','\n'*3)
+                continue
+
+        if choice == 'b':
+            df['Date'] = pd.to_datetime(df['Date'])
+            df['Year'] = df['Date'].dt.to_period('Y').dt.year
+            yearly_expense = df.groupby('Year')['Amount'].sum().reset_index()
+            ye = yearly_expense.plot.bar(x = 'Year', y = 'Amount', rot = 0)
+            plt.show()
+
+        if choice == 'c':
+            break
+
+        else:
+            print('Kindly enter A , B , C. Thank You!!')
+
 
 def main():
     #ask for csv file
