@@ -7,119 +7,155 @@ import matplotlib.pyplot as plt
 
 def pathcheck():
     while True:
-        
-        filepath = input('Enter the csv file path: ')
+
+        filepath = input("Enter the csv file path: ")
         if os.path.isfile(filepath):
-            print(2*'\n','File Loaded')
-            return filepath
+            print(2 * "\n", "File Loaded")
+            df = pd.read_csv(filepath)
+            return df, filepath
         else:
-            print('No such file at diectory')
+            print("No such file at diectory")
 
-def menu(filename):
 
-    while True:    
-        option = input('''
+def menu(filepath, df):
+
+    while True:
+        option = input(
+            """
                 <<<<<<  MENU  >>>>>>
                 (1) Add Expense
                 (2) View Summary
                 (3) History
                 (4) Exit
 
-                Choose an option: ''')
-        print(f'Option {option} choosen')
-        if option == '1':
-            print('Add expense','\n')
-            
-        elif option == '2':
-            print('summary')
-            catspending(filename)
-            
-        elif option == '3':
-            print('history')
-            
-        elif option == '4':
-            print('Exiting')
+                Choose an option: """
+        )
+        print(f"Option {option} choosen")
+        if option == "1":
+            addexpense(filepath, df)
+
+        elif option == "2":
+            summary(df)
+
+        elif option == "3":
+            history(df)
+
+        elif option == "4":
+            print("Exiting")
             sys.exit()
         else:
-            print("Enter Valid input in digits. Thank You!", end='\n')
-            
+            print("Enter Valid input in digits. Thank You!", end="\n")
+
 
 def budgetoverrun():
-    '''set parameters given by user plus have ome default parameters 
-       compare monthly sppending
-       tell if it is more and by how much'''
+    """set parameters given by user plus have ome default parameters
+    compare monthly sppending
+    tell if it is more and by how much"""
     ...
 
-def addexpense(filename, expense):
-    '''
-    while true
-    ask for expense 
-    check if valid expense
-    if valid enter
-    show tail to confirm changes
-    ask if want to add again
-    return updated csv
 
-    '''
-    ...
+def getexpense(df):
 
-def summary(filename):
+    year = input("Enter Year: ")
+    month = input("Enter Month: ")
+    day = input("Enter Day: ")
+    date = year + "-" + month + "-" + day
+
+    print("\n" * 2)
+
+    amount = float(input("Enter amount : "))
+
+    print("\n" * 2)
+
+    all_categories = df["Category"].unique()
+    cat_dict = {i: category for i, category in enumerate(all_categories, start=1)}
+
+    print("Select Category : ", "\n")
+
+    for num, category in cat_dict.items():
+        print(f"({num})--> {category}")
+    print("\n" * 2)
+
+    while True:
+        usr_cat_num = int(input("Select Category : "))
+        if usr_cat_num in cat_dict:
+            category = cat_dict[usr_cat_num]
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+    new_expense_format = {"Date": date, "Amount": amount, "Category": category}
+
+    return new_expense_format
+
+
+def addexpense(filename, df):
+
+    user_data = getexpense(df)
+    new_data_df = pd.DataFrame([user_data])
+    df = pd.concat([df, new_data_df], ignore_index=True)
+    df.to_csv(filename, mode="w", index=False)
+    print("\n File updated successfully \n")
+
+
+def summary(df):
     month_map = {
-    'January': '01',
-    'February': '02',
-    'March': '03',
-    'April': '04',
-    'May': '05',
-    'June': '06',
-    'July': '07',
-    'August': '08',
-    'September': '09',
-    'October': '10',
-    'November': '11',
-    'December': '12'
+        "January": "01",
+        "February": "02",
+        "March": "03",
+        "April": "04",
+        "May": "05",
+        "June": "06",
+        "July": "07",
+        "August": "08",
+        "September": "09",
+        "October": "10",
+        "November": "11",
+        "December": "12",
     }
-    df =  pd.read_csv('one_year_data.csv')
-    df[['Year', 'Month', 'Day']] = df['Date'].str.split(('-'), expand=True)
-    month = input('Enter the month you want to see history of :').strip().title()
-    print(month_map[month])
-
-    df.drop(columns='Date', inplace=True)
-    filtered_df = df[ (df['Month'] == month_map[month])]
-    filtered_df = filtered_df[['Day','Category','Amount']]
-    filtered_df.reset_index(drop=True, inplace=True)
-    print(filtered_df.to_string(),'\n'*3)
-
-
-
-
-
-
-def catspending(filename):
-    
-    df = pd.read_csv(filename)
-    total = df['Amount'].sum()
-    categoryspending = df.groupby('Category', as_index=False)['Amount'].sum()
-    categoryspending = categoryspending.sort_values(by='Amount', ascending=False)
-    categoryspending['Percentage'] = (categoryspending['Amount']/total)*100
+    total = df["Amount"].sum()
+    categoryspending = df.groupby("Category", as_index=False)["Amount"].sum()
+    categoryspending = categoryspending.sort_values(by="Amount", ascending=False)
+    categoryspending["Percentage"] = (categoryspending["Amount"] / total) * 100
     print(categoryspending.to_markdown())
+    categoryspending = categoryspending.set_index("Category")
     labels = categoryspending.index
 
     # Pie chart sizes (percentages)
-    sizes = categoryspending['Percentage']
+    sizes = categoryspending["Percentage"]
 
     # Plotting the pie chart
     plt.figure(figsize=(7, 7))
-    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, colors=plt.cm.Paired.colors)
-    plt.title('Category Distribution')
-    plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    plt.pie(
+        sizes,
+        labels=labels,
+        autopct="%1.1f%%",
+        startangle=90,
+        colors=plt.cm.Paired.colors,
+    )
+    plt.title("Category Distribution")
+    plt.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
     plt.show()
-        
 
-def history(filename):
-    df = pd.read_csv(filename)
-        
-    while True:    
-        choice =  input('''Choose option
+    df[["Year", "Month", "Day"]] = df["Date"].str.split(("-"), expand=True)
+    month = input("Enter the month you want to see history of :").strip().title()
+    print(month_map[month])
+
+    df.drop(columns="Date", inplace=True)
+    filtered_df = df[(df["Month"] == month_map[month])]
+    filtered_df = filtered_df[["Day", "Category", "Amount"]]
+    filtered_df.reset_index(drop=True, inplace=True)
+    print(filtered_df.to_string(), "\n" * 3)
+
+
+def history(df):
+
+    while True:
+        choice = (
+            input(
+                """
+                        
+                        Choose option
                         
                         (A) Monthly Spending History of Selected Year
                         
@@ -127,61 +163,52 @@ def history(filename):
 
                         (C) Exit History
                         
-                        Enter Choice ----> ''').strip().lower()
-        if choice == 'a':
-            yr = int(input('Enter Year : '))
-            print('\n'*2)
-            print(f'Filtering Year {yr}','\n'*3)
-            try:    
-                df['Date'] = pd.to_datetime(df['Date'])
-                filterdf = df[(df['Date'].dt.year == yr)]
-                filterdf['Month'] = filterdf['Date'].dt.to_period('M').dt.month
-                monthly_expense = filterdf.groupby('Month')['Amount'].sum().reset_index()
-                me = monthly_expense.plot.bar(x = 'Month', y = 'Amount', rot = 0)
+                        Enter Choice ----> """
+            )
+            .strip()
+            .lower()
+        )
+
+        if choice == "a":
+            yr = int(input("Enter Year : "))
+            print("\n" * 2)
+            print(f"Filtering Year {yr}", "\n" * 3)
+            try:
+                df["Date"] = pd.to_datetime(df["Date"])
+                filterdf = df[(df["Date"].dt.year == yr)]
+                filterdf["Month"] = filterdf["Date"].dt.to_period("M").dt.month
+                monthly_expense = (
+                    filterdf.groupby("Month")["Amount"].sum().reset_index()
+                )
+                me = monthly_expense.plot.bar(x="Month", y="Amount", rot=0)
                 plt.show()
+                break
             except ValueError, IndexError:
-                print(f'{yr} Year not found','\n'*3)
+                print(f"{yr} Year not found", "\n" * 3)
                 continue
 
-        if choice == 'b':
-            df['Date'] = pd.to_datetime(df['Date'])
-            df['Year'] = df['Date'].dt.to_period('Y').dt.year
-            yearly_expense = df.groupby('Year')['Amount'].sum().reset_index()
-            ye = yearly_expense.plot.bar(x = 'Year', y = 'Amount', rot = 0)
+        if choice == "b":
+            df["Date"] = pd.to_datetime(df["Date"])
+            df["Year"] = df["Date"].dt.to_period("Y").dt.year
+            yearly_expense = df.groupby("Year")["Amount"].sum().reset_index()
+            ye = yearly_expense.plot.bar(x="Year", y="Amount", rot=0)
             plt.show()
+            break
 
-        if choice == 'c':
+        if choice == "c":
             break
 
         else:
-            print('Kindly enter A , B , C. Thank You!!')
+            print("Kindly enter A , B , C. Thank You!!")
 
 
 def main():
-    #ask for csv file
-    
+    # ask for csv file
 
-    f = Figlet(font = 'rounded')
-    print(f.renderText('BUDGET TRACKER'))
-    file = pathcheck()
-    menu(file)
+    f = Figlet(font="rounded")
+    print(f.renderText("BUDGET TRACKER"))
+    data, filepath = pathcheck()
+    menu(filepath, data)
 
-    
-
-    # Trends in spending
-    #categoize the data
-    #add data
-    #total
-    # budgeting exceed budget -- over spending under budget show rupees to be spared
-    # sort list descending = most expenses
-    #menu (1) Add Expense, (2) View Summary, or (3) Histoy, (4) Exit
 
 main()
-
-
-
-
-
-
-
-
