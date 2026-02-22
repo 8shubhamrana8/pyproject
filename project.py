@@ -210,7 +210,7 @@ def summary(df):
     plt.title(f"Category Distribution (TOTAL: ${total:,.2f})")
     plt.axis("equal")
     plt.savefig("summary.png")
-    plt.show()
+   
 
 
 
@@ -295,7 +295,7 @@ def budgetoverrun(df):
 
     plt.tight_layout()
     plt.savefig("budgetoverrun.png")
-    plt.show()
+   
 
 
 
@@ -317,6 +317,7 @@ def history(df):
                         str
             )
         choice = choice.strip().lower()
+        df["Date"] = pd.to_datetime(df["Date"])
         data_years = no_duplicate(df["Date"].dt.year.tolist())
 
         if choice == "a":
@@ -341,7 +342,7 @@ def history(df):
                 monthly_expense.plot.bar(x="Month", y="Amount", rot=0)
                 print(f"\n Showing monthly spending of year {yr} \n")
                 plt.savefig(f"{yr} monthly spending.png")
-                plt.show()
+               
                 break
             except (ValueError, IndexError):
                 print(f"⚠️⚠️⚠️   Year {yr} not found   ⚠️⚠️⚠️", "\n" * 3)
@@ -353,7 +354,7 @@ def history(df):
             yearly_expense = df.groupby("Year")["Amount"].sum().reset_index()
             yearly_expense.plot.bar(x="Year", y="Amount", rot=0)
             plt.savefig("history.png")
-            plt.show()
+           
             break
 
         if choice == "c":
