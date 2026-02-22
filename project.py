@@ -89,8 +89,12 @@ def menu(filepath, df):
         elif option == "2" or option == "summary":
             print(f"\n✅✅✅ Loading Summary ✅✅✅\n")
             summary(df)
-            show_monthly_expenses(df)
-            
+            x = check_valid_input(prompt=
+                                  "\n Would you like to see monthly expenses of any selected year? (yes/y & no/n)",
+                                  input_type= str,
+                                  condition= lambda x: x == "yes" or x == "y" or x == "no" or x == "n" )
+            if x == "yes" or x == "y":
+                show_monthly_expenses(df)
 
         elif option == "3" or option == "history" :
             print(f"\n✅✅✅ Loading History ✅✅✅\n")
@@ -101,10 +105,10 @@ def menu(filepath, df):
             budgetoverrun(df)
 
         elif option == "5" or option == "exit":
-            print("\nExiting!!! Thank You for using this programme!!!!!\n")
+            print("\n✅✅✅  Exiting!!! Thank You for using this programme!!!!! ✅✅✅\n")
             sys.exit()
         else:
-            print("⚠️⚠️⚠️   Enter Valid input in digits. Thank You!  ⚠️⚠️⚠️\n")
+            print("\n⚠️⚠️⚠️   Enter Valid input in digits. Thank You!  ⚠️⚠️⚠️\n")
 
 
 
@@ -205,7 +209,7 @@ def summary(df):
     )
     plt.title(f"Category Distribution (TOTAL: ${total:,.2f})")
     plt.axis("equal")
-    
+    plt.savefig("summary.png")
     plt.show()
 
 
@@ -290,6 +294,7 @@ def budgetoverrun(df):
             )
 
     plt.tight_layout()
+    plt.savefig("budgetoverrun.png")
     plt.show()
 
 
@@ -335,6 +340,7 @@ def history(df):
                 plt.style.use('dark_background')
                 monthly_expense.plot.bar(x="Month", y="Amount", rot=0)
                 print(f"\n Showing monthly spending of year {yr} \n")
+                plt.savefig(f"{yr} monthly spending.png")
                 plt.show()
                 break
             except (ValueError, IndexError):
@@ -346,6 +352,7 @@ def history(df):
             df["Year"] = df["Date"].dt.to_period("Y").dt.year
             yearly_expense = df.groupby("Year")["Amount"].sum().reset_index()
             yearly_expense.plot.bar(x="Year", y="Amount", rot=0)
+            plt.savefig("history.png")
             plt.show()
             break
 
