@@ -1,65 +1,55 @@
-📊 Personal Budget Tracker
-A robust, command-line interface (CLI) application built with Python to help you track expenses, visualize spending habits, and manage budgets through CSV data.
+📊 Personal Budget Tracker -- By Shubham
+    #### Video Demo:  <URL HERE>
+    #### Description:
 
-🌟 Features
-Secure Data Entry: Add expenses with multi-layer validation (Type, Range, and Calendar logic).
+    🌟project.py:
 
-Visual Summaries: Generate high-quality pie charts showing category distribution and percentage-based spending.
+    This is the core of my project as it contains the main execution loop plus all the core logic functions used in the programme such as:
 
-Monthly/Yearly History: Filter and view bar charts of your spending trends over different timeframes.
+    🚀 pathcheck(): This function makes sure that there exists a CSV file at the user mentioned path before attempting to load pandas, thus making sure programme dosen't crash.
 
-Budget Overrun Alerts: Set custom budgets for each category and receive visual "Over!" alerts if you exceed them.
+    🚀 check_valid_input(): Tired of validating user input as clean and valid, this fumction helps me to check if the user input is clean , in right type plus as a bonus one can enforce rules like input must be greater than 0 by passing the condition before data is accepted.
 
-Data Integrity: Automatic CSV formatting (zero-padding dates) to ensure data stays machine-readable and sortable.
+    🚀 menu(): Provides a clean CLI interface for the user with followin options to choose from:
 
-🛠️ Installation
-1. Prerequisites
-Ensure you have Python 3.x installed. You will also need the following libraries:
+        Option 1: Add a new expense.
 
-Bash
-pip install pandas matplotlib pyfiglet tabulate numpy
-2. File Structure
-Ensure your CSV file (e.g., expenses.csv) follows this header format:
-Date,Amount,Category
+        Option 2: View a pie chart summary of total spending.
 
-🚀 How to Use
-Launch the App: Run the script using Python.
+        Option 3: View historical bar charts (Monthly or Yearly).
 
-Bash
-python budget_tracker.py
-Load Data: Enter the path to your .csv file when prompted.
+        Option 4: Set budget limits and check for overspending.
 
-Navigate the Menu:
+        Option 5: Securely exit the application.
 
-Option 1: Add a new expense.
+    🚀 getexpense() & addexpense(): These functions handle all the user interface for entring new data and the back-end logic for appending that data to tha CSV file.
 
-Option 2: View a pie chart summary of total spending.
+    🚀 summary() & history(): These functions take advantage of the Pandas and Matplotlib libraries to aggregate data and represent or visualize data respectively.
 
-Option 3: View historical bar charts (Monthly or Yearly).
+    🌟test_project.py
 
-Option 4: Set budget limits and check for overspending.
+    To make sure of the reliability of the programmme this file contains a number of tests designed to work in tandem with Pytest. It mainly focuses on the pure functions that take specific inputs and return outputs that are predictaible and without any errors.
 
-Option 5: Securely exit the application.
+    By testing check_valid_date, getpercentage, and no_duplicate, we make sure that the logical foundation of the said functions is sound even if it is called at different scenarios.
 
-🧠 Logic Flow
-The application is built on a "Gatekeeper" architecture to ensure no "dirty data" enters your CSV:
+    🌟requirements.txt
 
-Input Validator: Catches non-numeric entries (e.g., typing "Ten" instead of 10).
+    This file lists all the external dependencies required to run my project. It includes the following
 
-Lambda Constraints: Prevents logical errors (e.g., entering Month 13).
+    1. Pandas --->  Used for data manipulation in different functions like summary, history and for data entry.
+    2. Matplotlib ---> Used fpr representing graphs and pie charts to make the data look more appealing and is easy to understand people.
+    3. Pyfiglet ---> Used for ASCII art styling
+    4. NumPy --> Used NumPy specifically within the function budgetoverrun to handle the visual layout of your "Budget vs. Actual" comparison bar chart.
 
-Calendar Check: Uses datetime logic to catch impossible dates (e.g., February 30th).
+    🌟Design choices/Paths I took
 
-Formatting: Automatically converts all dates to YYYY-MM-DD for perfect sorting.
+    1. Data Entry:
+    In starting I considered allowing user to enter free text but this leads to multiple issues like two distict categories for Grocery and groceries plus if a user entered wrong category , my programme could not assist user in correcting it. Therfore I choose to extract the categories from the existing CSV file and presented them in a numbered format.This ensured data consistency.
+    I also debated adding a "New Category" option but decided to keep the current version focused on maintaining a clean, existing schema to prevent "category bloat."
 
-📈 Example Visualization
-When you view your Budget Overrun, the app generates a side-by-side comparison bar chart:
+    2. Data Representation:
+    Initially I was seeking to present my data in a tabular format. But not only it complicates the presenting data in terminal but also limits the user to make quick assements to his/her data. It is therefore I started to learn Pandas and Matplotlib to represent my data beautifully in form of pie charts and bar graphs.
 
-Blue Bars: Your actual spending.
+    🌟 Conclusion:
+    My project demonstrates pythons data science libraries like Pandas, Matplotlib, Numpy and combines it with user centric CLI design. It gives the user's CSV file a whole new meaning with clean data representation plus guards against human error.    
 
-Red Bars: Your budgeted limit.
-
-Red Text: An "Over!" tag specifically for categories that exceeded the limit.
-
-📄 License
-This project is open-source and free to use for personal financial management.
