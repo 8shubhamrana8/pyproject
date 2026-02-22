@@ -1,0 +1,366 @@
+Date,Amount,Category
+2025-01-01,57.22,Utilities
+2025-01-02,54.46,Subscriptions
+2025-01-03,31.28,Transport
+2025-01-04,24.09,Healthcare
+2025-01-05,104.73,Groceries
+2025-01-06,141.4,Utilities
+2025-01-07,148.55,Subscriptions
+2025-01-08,141.25,Healthcare
+2025-01-09,62.7,Healthcare
+2025-01-10,40.25,Healthcare
+2025-01-11,80.87,Dining Out
+2025-01-12,111.92,Dining Out
+2025-01-13,109.01,Groceries
+2025-01-14,28.2,Utilities
+2025-01-15,14.96,Healthcare
+2025-01-16,82.17,Dining Out
+2025-01-17,147.81,Entertainment
+2025-01-18,62.4,Utilities
+2025-01-19,109.33,Dining Out
+2025-01-20,62.59,Utilities
+2025-01-21,136.9,Entertainment
+2025-01-22,102.09,Utilities
+2025-01-23,20.57,Entertainment
+2025-01-24,87.52,Healthcare
+2025-01-25,128.73,Groceries
+2025-01-26,50.54,Healthcare
+2025-01-27,78.1,Subscriptions
+2025-01-28,24.09,Healthcare
+2025-01-29,63.59,Dining Out
+2025-01-30,94.92,Dining Out
+2025-01-31,11.83,Healthcare
+2025-02-01,45.27,Healthcare
+2025-02-02,87.16,Dining Out
+2025-02-03,80.74,Dining Out
+2025-02-04,142.46,Subscriptions
+2025-02-05,38.13,Subscriptions
+2025-02-06,70.86,Utilities
+2025-02-07,145.12,Dining Out
+2025-02-08,133.69,Entertainment
+2025-02-09,40.88,Dining Out
+2025-02-10,110.03,Entertainment
+2025-02-11,83.84,Entertainment
+2025-02-12,90.77,Transport
+2025-02-13,109.19,Subscriptions
+2025-02-14,33.07,Transport
+2025-02-15,97.79,Subscriptions
+2025-02-16,61.3,Subscriptions
+2025-02-17,42.42,Transport
+2025-02-18,33.69,Utilities
+2025-02-19,33.53,Subscriptions
+2025-02-20,83.68,Entertainment
+2025-02-21,62.94,Transport
+2025-02-22,50.68,Utilities
+2025-02-23,138.36,Transport
+2025-02-24,139.3,Groceries
+2025-02-25,74.04,Subscriptions
+2025-02-26,70.07,Entertainment
+2025-02-27,76.14,Dining Out
+2025-02-28,143.53,Transport
+2025-03-01,89.43,Subscriptions
+2025-03-02,140.26,Subscriptions
+2025-03-03,103.42,Subscriptions
+2025-03-04,57.85,Entertainment
+2025-03-05,84.35,Subscriptions
+2025-03-06,75.8,Utilities
+2025-03-07,125.23,Subscriptions
+2025-03-08,147.22,Dining Out
+2025-03-09,16.55,Groceries
+2025-03-10,50.19,Groceries
+2025-03-11,90.88,Subscriptions
+2025-03-12,74.61,Utilities
+2025-03-13,81.44,Groceries
+2025-03-14,140.06,Subscriptions
+2025-03-15,122.13,Utilities
+2025-03-16,16.46,Groceries
+2025-03-17,87.04,Healthcare
+2025-03-18,144.57,Transport
+2025-03-19,70.88,Entertainment
+2025-03-20,121.55,Groceries
+2025-03-21,92.5,Dining Out
+2025-03-22,60.71,Utilities
+2025-03-23,120.1,Dining Out
+2025-03-24,61.03,Entertainment
+2025-03-25,86.52,Healthcare
+2025-03-26,39.53,Groceries
+2025-03-27,83.62,Groceries
+2025-03-28,38.61,Utilities
+2025-03-29,100.2,Utilities
+2025-03-30,73.96,Healthcare
+2025-03-31,57.98,Utilities
+2025-04-01,146.85,Dining Out
+2025-04-02,28.96,Dining Out
+2025-04-03,88.32,Healthcare
+2025-04-04,85.55,Groceries
+2025-04-05,120.67,Entertainment
+2025-04-06,79.17,Healthcare
+2025-04-07,134.44,Groceries
+2025-04-08,27.78,Entertainment
+2025-04-09,96.27,Dining Out
+2025-04-10,72.75,Transport
+2025-04-11,126.95,Dining Out
+2025-04-12,143.08,Dining Out
+2025-04-13,102.84,Groceries
+2025-04-14,72.01,Utilities
+2025-04-15,148.22,Transport
+2025-04-16,72.38,Utilities
+2025-04-17,101.79,Utilities
+2025-04-18,54.24,Entertainment
+2025-04-19,104.94,Subscriptions
+2025-04-20,127.17,Utilities
+2025-04-21,36.91,Groceries
+2025-04-22,37.43,Utilities
+2025-04-23,147.9,Utilities
+2025-04-24,66.14,Utilities
+2025-04-25,147.31,Groceries
+2025-04-26,40.96,Subscriptions
+2025-04-27,51.23,Transport
+2025-04-28,38.65,Transport
+2025-04-29,56.27,Subscriptions
+2025-04-30,63.71,Dining Out
+2025-05-01,33.79,Groceries
+2025-05-02,92.08,Groceries
+2025-05-03,141.69,Dining Out
+2025-05-04,126.42,Subscriptions
+2025-05-05,76.93,Utilities
+2025-05-06,64.52,Transport
+2025-05-07,86.66,Dining Out
+2025-05-08,35.09,Groceries
+2025-05-09,105.19,Transport
+2025-05-10,19.79,Transport
+2025-05-11,104.44,Utilities
+2025-05-12,37.27,Dining Out
+2025-05-13,71.73,Healthcare
+2025-05-14,71.59,Transport
+2025-05-15,147.52,Healthcare
+2025-05-16,113.47,Utilities
+2025-05-17,91.51,Groceries
+2025-05-18,103.07,Subscriptions
+2025-05-19,89.39,Groceries
+2025-05-20,72.88,Transport
+2025-05-21,49.36,Utilities
+2025-05-22,145.82,Dining Out
+2025-05-23,141.19,Entertainment
+2025-05-24,131.39,Transport
+2025-05-25,36.77,Entertainment
+2025-05-26,111.8,Dining Out
+2025-05-27,104.66,Utilities
+2025-05-28,118.6,Utilities
+2025-05-29,49.39,Healthcare
+2025-05-30,141.33,Dining Out
+2025-05-31,133.31,Dining Out
+2025-06-01,41.38,Entertainment
+2025-06-02,87.21,Dining Out
+2025-06-03,48.06,Utilities
+2025-06-04,46.54,Transport
+2025-06-05,129.28,Entertainment
+2025-06-06,77.44,Healthcare
+2025-06-07,145.43,Dining Out
+2025-06-08,80.9,Healthcare
+2025-06-09,53.19,Transport
+2025-06-10,103.83,Transport
+2025-06-11,73.91,Dining Out
+2025-06-12,35.42,Healthcare
+2025-06-13,126.43,Subscriptions
+2025-06-14,19.66,Transport
+2025-06-15,46.97,Transport
+2025-06-16,111.1,Transport
+2025-06-17,62.0,Transport
+2025-06-18,14.29,Entertainment
+2025-06-19,12.64,Subscriptions
+2025-06-20,83.51,Utilities
+2025-06-21,58.19,Dining Out
+2025-06-22,108.6,Dining Out
+2025-06-23,52.46,Transport
+2025-06-24,70.3,Subscriptions
+2025-06-25,116.58,Subscriptions
+2025-06-26,65.99,Healthcare
+2025-06-27,122.35,Healthcare
+2025-06-28,97.81,Subscriptions
+2025-06-29,112.47,Subscriptions
+2025-06-30,81.84,Dining Out
+2025-07-01,38.07,Groceries
+2025-07-02,85.49,Transport
+2025-07-03,71.93,Healthcare
+2025-07-04,120.94,Dining Out
+2025-07-05,95.8,Entertainment
+2025-07-06,20.52,Transport
+2025-07-07,127.73,Utilities
+2025-07-08,86.05,Utilities
+2025-07-09,25.99,Entertainment
+2025-07-10,81.99,Subscriptions
+2025-07-11,117.31,Entertainment
+2025-07-12,79.75,Transport
+2025-07-13,81.59,Entertainment
+2025-07-14,31.53,Subscriptions
+2025-07-15,144.3,Groceries
+2025-07-16,15.74,Subscriptions
+2025-07-17,46.41,Subscriptions
+2025-07-18,60.76,Groceries
+2025-07-19,52.48,Entertainment
+2025-07-20,63.54,Utilities
+2025-07-21,47.94,Subscriptions
+2025-07-22,112.16,Groceries
+2025-07-23,63.45,Entertainment
+2025-07-24,121.39,Transport
+2025-07-25,138.05,Transport
+2025-07-26,17.01,Subscriptions
+2025-07-27,58.02,Subscriptions
+2025-07-28,88.18,Entertainment
+2025-07-29,45.96,Utilities
+2025-07-30,14.1,Dining Out
+2025-07-31,124.73,Utilities
+2025-08-01,45.96,Subscriptions
+2025-08-02,99.72,Subscriptions
+2025-08-03,73.87,Subscriptions
+2025-08-04,106.35,Dining Out
+2025-08-05,139.74,Transport
+2025-08-06,29.65,Utilities
+2025-08-07,44.5,Utilities
+2025-08-08,59.05,Entertainment
+2025-08-09,91.84,Subscriptions
+2025-08-10,85.26,Dining Out
+2025-08-11,91.02,Entertainment
+2025-08-12,21.36,Dining Out
+2025-08-13,69.65,Utilities
+2025-08-14,87.08,Dining Out
+2025-08-15,136.18,Transport
+2025-08-16,35.7,Entertainment
+2025-08-17,149.76,Groceries
+2025-08-18,97.16,Subscriptions
+2025-08-19,117.24,Transport
+2025-08-20,82.48,Transport
+2025-08-21,20.9,Subscriptions
+2025-08-22,73.22,Transport
+2025-08-23,42.61,Entertainment
+2025-08-24,18.05,Utilities
+2025-08-25,143.54,Groceries
+2025-08-26,131.42,Dining Out
+2025-08-27,38.77,Transport
+2025-08-28,84.09,Dining Out
+2025-08-29,147.52,Groceries
+2025-08-30,134.59,Healthcare
+2025-08-31,34.48,Utilities
+2025-09-01,38.57,Healthcare
+2025-09-02,15.41,Entertainment
+2025-09-03,147.62,Subscriptions
+2025-09-04,144.74,Transport
+2025-09-05,137.51,Groceries
+2025-09-06,12.43,Dining Out
+2025-09-07,72.03,Healthcare
+2025-09-08,73.88,Dining Out
+2025-09-09,83.84,Healthcare
+2025-09-10,31.22,Subscriptions
+2025-09-11,52.9,Dining Out
+2025-09-12,101.44,Dining Out
+2025-09-13,56.15,Transport
+2025-09-14,50.41,Entertainment
+2025-09-15,17.46,Groceries
+2025-09-16,58.35,Subscriptions
+2025-09-17,60.15,Utilities
+2025-09-18,130.92,Transport
+2025-09-19,107.19,Groceries
+2025-09-20,54.39,Dining Out
+2025-09-21,50.21,Entertainment
+2025-09-22,41.62,Transport
+2025-09-23,80.19,Subscriptions
+2025-09-24,141.34,Groceries
+2025-09-25,115.44,Healthcare
+2025-09-26,32.32,Transport
+2025-09-27,122.41,Transport
+2025-09-28,125.45,Subscriptions
+2025-09-29,128.04,Healthcare
+2025-09-30,17.71,Utilities
+2025-10-01,15.52,Dining Out
+2025-10-02,82.02,Utilities
+2025-10-03,70.79,Subscriptions
+2025-10-04,61.41,Healthcare
+2025-10-05,84.21,Subscriptions
+2025-10-06,95.93,Healthcare
+2025-10-07,46.06,Transport
+2025-10-08,19.32,Entertainment
+2025-10-09,70.46,Transport
+2025-10-10,115.7,Healthcare
+2025-10-11,78.66,Groceries
+2025-10-12,14.3,Groceries
+2025-10-13,20.47,Healthcare
+2025-10-14,50.66,Entertainment
+2025-10-15,130.81,Transport
+2025-10-16,38.68,Dining Out
+2025-10-17,10.84,Healthcare
+2025-10-18,90.42,Dining Out
+2025-10-19,103.58,Dining Out
+2025-10-20,88.92,Groceries
+2025-10-21,22.11,Utilities
+2025-10-22,94.81,Utilities
+2025-10-23,58.11,Utilities
+2025-10-24,31.85,Dining Out
+2025-10-25,45.48,Transport
+2025-10-26,104.7,Healthcare
+2025-10-27,144.24,Utilities
+2025-10-28,131.53,Utilities
+2025-10-29,43.04,Groceries
+2025-10-30,39.7,Transport
+2025-10-31,121.15,Groceries
+2025-11-01,22.87,Entertainment
+2025-11-02,24.25,Dining Out
+2025-11-03,62.33,Dining Out
+2025-11-04,75.1,Groceries
+2025-11-05,24.4,Healthcare
+2025-11-06,12.86,Subscriptions
+2025-11-07,80.22,Dining Out
+2025-11-08,21.66,Subscriptions
+2025-11-09,38.92,Dining Out
+2025-11-10,141.09,Transport
+2025-11-11,120.22,Dining Out
+2025-11-12,114.62,Groceries
+2025-11-13,118.44,Groceries
+2025-11-14,19.13,Transport
+2025-11-15,113.9,Entertainment
+2025-11-16,32.61,Entertainment
+2025-11-17,89.06,Dining Out
+2025-11-18,83.01,Entertainment
+2025-11-19,101.46,Utilities
+2025-11-20,85.33,Transport
+2025-11-21,76.35,Entertainment
+2025-11-22,19.51,Entertainment
+2025-11-23,136.71,Utilities
+2025-11-24,130.71,Subscriptions
+2025-11-25,133.06,Utilities
+2025-11-26,53.52,Entertainment
+2025-11-27,24.41,Utilities
+2025-11-28,144.21,Healthcare
+2025-11-29,76.94,Transport
+2025-11-30,83.44,Healthcare
+2025-12-01,96.95,Subscriptions
+2025-12-02,89.76,Utilities
+2025-12-03,71.01,Subscriptions
+2025-12-04,131.87,Utilities
+2025-12-05,144.09,Groceries
+2025-12-06,112.09,Entertainment
+2025-12-07,130.39,Healthcare
+2025-12-08,111.95,Groceries
+2025-12-09,126.93,Transport
+2025-12-10,11.77,Healthcare
+2025-12-11,87.93,Subscriptions
+2025-12-12,149.78,Transport
+2025-12-13,96.57,Groceries
+2025-12-14,99.56,Transport
+2025-12-15,103.38,Subscriptions
+2025-12-16,125.69,Healthcare
+2025-12-17,57.48,Healthcare
+2025-12-18,118.57,Transport
+2025-12-19,24.72,Entertainment
+2025-12-20,78.59,Utilities
+2025-12-21,15.79,Healthcare
+2025-12-22,26.71,Dining Out
+2025-12-23,147.44,Groceries
+2025-12-24,88.04,Utilities
+2025-12-25,77.63,Utilities
+2025-12-26,109.91,Dining Out
+2025-12-27,22.18,Utilities
+2025-12-28,123.18,Healthcare
+2025-12-29,67.49,Entertainment
+2025-12-30,81.73,Entertainment
+2025-12-31,14.94,Subscriptions

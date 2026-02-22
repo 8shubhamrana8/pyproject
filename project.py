@@ -365,4 +365,5 @@ def main():
     menu(filepath, data)
 
 
-main()
+if __name__ == "__main__":
+    main()
