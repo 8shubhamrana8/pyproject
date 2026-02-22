@@ -48,7 +48,8 @@
     I also debated adding a "New Category" option but decided to keep the current version focused on maintaining a clean, existing schema to prevent "category bloat."
 
     2. Data Representation:
-    Initially I was seeking to present my data in a tabular format. But not only it complicates the presenting data in terminal but also limits the user to make quick assements to his/her data. It is therefore I started to learn Pandas and Matplotlib to represent my data beautifully in form of pie charts and bar graphs.
+    Initially I was seeking to present my data in a tabular format. But not only it complicates the presenting of the data in terminal but also limits the user to make quick assements to his/her data. It is therefore I started to learn Pandas and Matplotlib to represent my data beautifully in form of pie charts and bar graphs.
+    Additionaly I could save these graphs to directory so that user can have access to them after exiting programme.
 
     🌟 Conclusion:
     My project demonstrates pythons data science libraries like Pandas, Matplotlib, Numpy and combines it with user centric CLI design. It gives the user's CSV file a whole new meaning with clean data representation plus guards against human error.    
